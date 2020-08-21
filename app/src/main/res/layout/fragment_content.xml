@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reFragmentContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <EditText
+        android:id="@+id/svContent"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/contentHeader"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_shape_search_view"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/svContent"
+        android:layout_marginTop="10dp">
+
+        <ListView
+            android:id="@+id/lstContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/svContent"
+            android:layout_marginTop="10dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

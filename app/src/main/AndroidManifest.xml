@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.vinsofts.handbooks">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sotay_icon_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="net.vinsofts.handbooks.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="net.vinsofts.handbooks.activity.BackgroundActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="net.vinsofts.handbooks.activity.PageDetailActivity" />
+        <activity android:name="net.vinsofts.handbooks.activity.NoteActivity" />
+        <activity android:name="net.vinsofts.handbooks.activity.WebviewTips" />
+        <activity
+            android:name="net.vinsofts.handbooks.activity.SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="net.vinsofts.handbooks.activity.PrimacyActivity" />
+
+        <receiver
+            android:name="net.vinsofts.handbooks.common.AlarmReceiver"
+            android:process=":remote" />
+    </application>
+
+</manifest>
